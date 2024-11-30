@@ -1,0 +1,11 @@
+[package]
+name = "chip8-desktop"
+version = "0.1.0"
+edition = "2021"
+
+
+
+
+[dependencies]
+chip8_core = { path = "../chip8_core" }
+sdl2 = { version = "0.37.0", features = ["bundled", "static-link"] }
