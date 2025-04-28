@@ -42,6 +42,8 @@ pub struct Emu {
     st: u8,
 }
 
+
+
 impl Emu {
     pub fn new() -> Self {
         let mut new_emu = Self {
@@ -136,7 +138,7 @@ impl Emu {
 
         match (digit1, digit2, digit3, digit4) {
             // NOP do nothing
-            (0, 0, 0, 0) => return,
+            (0, 0, 0, 0) => (),
 
             // CLS 
             // Opcode 0x00E0 is the instruction to clear the screen,
