@@ -1,2 +1,7 @@
+
+on:
+  push:
+    branches: [ main ]
+    
 - name: GitHub README Generator
   uses: th3c0d3br34ker/github-readme-info@1.0.2
