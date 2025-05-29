@@ -1,7 +1,16 @@
-
-on:
-  push:
-    branches: [ main ]
-    
-- name: GitHub README Generator
-  uses: th3c0d3br34ker/github-readme-info@1.0.2
+name: Generate README
+on: [push]
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Generate README
+        uses: bitflight-devops/github-action-readme-generator@v1.7.2
+        with:
+          action: "action.yml"
+          readme: "README.md"
+          pretty: true
+          versioning_enabled: true
+          include_github_version_badge: true
